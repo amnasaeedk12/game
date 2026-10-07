@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Little Cafe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game">
+    <!-- Striped awning -->
+    <div class="awning"></div>
+
+    <!-- HUD -->
+    <header class="hud">
+      <h1 class="logo">☕ My Little Cafe</h1>
+      <div class="stats">
+        <div class="stat"><span class="label">⭐ Score</span><span id="score" class="value">0</span></div>
+        <div class="stat"><span class="label">🪙 Coins</span><span id="coins" class="value">0</span></div>
+        <div class="stat"><span class="label">⏰ Time</span><span id="timer" class="value">120</span></div>
+        <div class="stat happiness">
+          <span class="label">😊 Happiness</span>
+          <div class="meter"><div id="happinessBar" class="meter-fill"></div></div>
+        </div>
+        <button id="muteBtn" class="icon-btn" title="Toggle sound">🔊</button>
+      </div>
+    </header>
+
+    <main class="play-area">
+      <!-- Dining room -->
+      <section class="dining">
+        <div class="door">🚪</div>
+        <div class="plant left">🪴</div>
+        <div class="plant right">🪴</div>
+        <div id="tables" class="tables"></div>
+      </section>
+
+      <!-- Kitchen -->
+      <section class="kitchen">
+        <h2>👩‍🍳 Kitchen</h2>
+        <div id="menu" class="menu"></div>
+
+        <div class="prep">
+          <div class="tray-wrap">
+            <span class="tray-label">Tray</span>
+            <div id="tray" class="tray"></div>
+          </div>
+          <div class="cook-bar"><div id="cookProgress" class="cook-progress"></div></div>
+          <div class="prep-buttons">
+            <button id="cookBtn" class="btn cook">🔥 Cook</button>
+            <button id="clearBtn" class="btn clear">🗑️ Clear</button>
+          </div>
+        </div>
+
+        <p id="hint" class="hint">Click food to add it to the tray.</p>
+        <p class="keys">Keys: 1–5 add food · Space cook · Backspace clear</p>
+      </section>
+    </main>
+
+    <!-- Start screen -->
+    <div id="startScreen" class="overlay show">
+      <div class="panel">
+        <div class="big-emoji">🍔🍕🍟🍝🥤</div>
+        <h2>Welcome to My Little Cafe!</h2>
+        <ol class="howto">
+          <li>Customers sit down and show their order 💭</li>
+          <li>Click the matching food to put it on the tray</li>
+          <li>Press <b>Cook</b> and wait until it's ready</li>
+          <li>Click the customer to serve them before they get grumpy!</li>
+        </ol>
+        <p class="small">Wrong or late orders lower happiness. If happiness hits zero, the cafe closes!</p>
+        <button id="startBtn" class="btn big">▶ Start Game</button>
+      </div>
+    </div>
+
+    <!-- Game over screen -->
+    <div id="gameOverScreen" class="overlay">
+      <div class="panel">
+        <div class="big-emoji" id="overEmoji">🏁</div>
+        <h2 id="overTitle">Game Over!</h2>
+        <div class="results">
+          <p>⭐ Score: <b id="finalScore">0</b></p>
+          <p>🪙 Coins: <b id="finalCoins">0</b></p>
+          <p>🍽️ Customers served: <b id="finalServed">0</b></p>
+          <p>🏆 Best score: <b id="bestScore">0</b></p>
+        </div>
+        <button id="playAgainBtn" class="btn big">🔄 Play Again</button>
+      </div>
+    </div>
+
+    <div id="floaters"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

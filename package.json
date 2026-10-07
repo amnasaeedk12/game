@@ -1,0 +1,16 @@
+{
+  "name": "my-little-cafe",
+  "version": "1.0.0",
+  "description": "My Little Cafe - a simple restaurant game in HTML, CSS and vanilla JavaScript",
+  "main": "script.js",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
+  }
+}
